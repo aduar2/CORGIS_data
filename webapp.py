@@ -27,16 +27,12 @@ def find_years_range():
                 firstYear = year
             if year > lastYear:
                 lastYear = year
-        }
-        else {
-            if backUp > 0
-            {
+        else:
+            if backUp > 0:
                 if backUp + average < firstYear:
                     firstYear = backUp + average
                 if backUp + average > lastyear:
                     lastYear = backUp + average
-            }
-        }
         return "contains data on buildings built from " + firstYear + " to " + lastYear
     
 def find_average_completion():
