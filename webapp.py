@@ -8,11 +8,11 @@ app = Flask(__name__)
 def about():
     return render_template('about.html')
 
-@app.route("/tallestBuilt")
+@app.route("/tallestBuilt.html")
 def home():
     return render_template('tallestBuilt.html', options = get_year_options())
 
-@app.route("/tallestBuiltResponse")
+@app.route("/tallestBuiltResponse.html")
 def response():
     year = request.args['year']
     return render_template('tallestBuiltResponse.html', options = get_year_options(), response = get_tallest(year))
