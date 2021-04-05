@@ -67,7 +67,7 @@ def get_year_options():
 
 def get_tallest(year):
     with open('skyscrapers.json') as skyscraper_data
-    skyscrapers = json.load(skyscraper_data)
+        skyscrapers = json.load(skyscraper_data)
     allBuilt = []
     allBuiltHeights = []
     for skyscraper in skyscrapers:
