@@ -80,5 +80,10 @@ def get_tallest(year):
             allBuiltHeights.append("skyscraper["statistics"]["height"])
     tallest = "none"
     tallestHeight = 0
+    count = 0      
     for x in allBuiltHeights:
-        if x > talleatHeight:
+        if x > tallestHeight:
+            tallestHeight = x
+            tallest = allBuiltHeights[count]
+        count = count + 1
+    return tallest + " with a height of " + tallestHeight
