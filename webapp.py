@@ -60,7 +60,7 @@ def get_year_options():
         skyscrapers = json.load(skyscraper_data)
     for skyscraper in skyscrapers:
         year = skyscraper["status"]["completed"]["year"]
-        if year > 0
+        if year > 0:
             years.append(year)
     years.sort()
     return years
