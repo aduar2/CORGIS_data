@@ -73,7 +73,7 @@ def get_tallest(year):
     for skyscraper in skyscrapers:
         if skyscraper["status"]["completed"]["year"] == year:
             allBuilt.append(skyscraper["name"])
-            allBuiltHeights.append("skyscraper["statistics"]["height"])
+            allBuiltHeights.append(skyscraper["statistics"]["height"])
     tallest = "none"
     tallestHeight = 0
     count = 0      
