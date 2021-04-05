@@ -67,7 +67,10 @@ def get_year_options():
         if year > 0:
             years.append(year)
     years.sort()
-    return years
+    options = ""
+    for s in years:
+        options = options + Markup("<option value=\"" + s + "\">" + s + "</option>")
+    return options
 
 def get_tallest(year):
     with open('skyscrapers.json') as skyscraper_data:
