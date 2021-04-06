@@ -10,12 +10,12 @@ def about():
 
 @app.route("/tallestBuilt")
 def home():
-    return render_template('tallestBuilt.html', options = get_year_options(), nav = 'navBar.html')
+    return render_template('tallestBuilt.html', options = get_year_options(), nav = navBar.html)
 
 @app.route("/tallestBuiltResponse")
 def response():
     year = request.args['year']
-    return render_template('tallestBuiltResponse.html', options = get_year_options(), response = get_tallest(year), nav = 'navBar.html')
+    return render_template('tallestBuiltResponse.html', options = get_year_options(), response = get_tallest(year), nav = navBar.html)
     
 def find_years_range():
     firstYear = 2021
