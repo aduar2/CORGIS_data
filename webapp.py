@@ -67,8 +67,9 @@ def get_year_options():
         if year > 0:
             years.append(year)
     years.sort()
-    options = 0
-    for s in years:
+    strYears = (str)years
+    options = ""
+    for s in strYears:
         options = options + Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 
