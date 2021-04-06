@@ -9,11 +9,11 @@ def about():
     return render_template('about.html')
 
 @app.route("/tallestBuilt")
-def home():
+def tallHome():
     return render_template('tallestBuilt.html', options = get_year_options())
 
 @app.route("/tallestBuiltResponse")
-def response():
+def tallResponse():
     year = request.args['year']
     return render_template('tallestBuiltResponse.html', options = get_year_options(), response = get_tallest(year))
     
