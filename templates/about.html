@@ -13,12 +13,16 @@
   </head>
   <body>
     
-    <script src="//code.jquery.com/jquery.min.js"></script>
+    <div id="nav-placeholder">
+
+    </div>
+
     <script>
-      $.get("navBar.html", function(data){
-        $("#nav-placeholder").replaceWith(data);
+      $(function(){
+        $("#nav-placeholder").load("nav.html");
       });
     </script>
+
 
 <p>The data used in this web app is from CORGIS Dataset Collection. </p>
 
