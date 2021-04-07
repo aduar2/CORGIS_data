@@ -65,12 +65,10 @@ def get_year_options():
     for skyscraper in skyscrapers:
         year = skyscraper["status"]["completed"]["year"]
         if year > 0:
-            years.append(year)
+            years.append((str)year)
     years.sort()
-    y = []
-    y = (str)years
     options = ""
-    for s in y:
+    for s in years:
         options = options + Markup("<option value=\"" + s + "\">" + s + "</option>")
     return options
 
