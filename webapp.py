@@ -86,7 +86,7 @@ def get_tallest(year):
     count = 0      
     for x in allBuiltHeights:
         if x > tallestHeight:
-            tallestHeight = int(x)
+            tallestHeight = str(x)
             tallest = allBuiltHeights[count]
         count = count + 1
     return tallest + " with a height of " + tallestHeight
