@@ -25,7 +25,7 @@ def find_years_range():
         skyscrapers = json.load(skyscraper_data)
     for skyscraper in skyscrapers:
         year = skyscraper["status"]["completed"]["year"]
-        backUp = skyscraper["started"]["year"]
+        backUp = skyscraper["status"]["started"]["year"]
         if year > 0:
             if year < firstYear:
                 firstYear = year
@@ -48,7 +48,7 @@ def find_average_completion():
     average = 0
     for skyscraper in skyscrapers:
         completed = skyscraper["status"]["completed"]["year"]
-        started = skyscraper["started"]["year"]
+        started = skyscraper["status"]["started"]["year"]
         if not started == 0 or not completed == 0:
             time = completed - started
         completionTime.append(time)
