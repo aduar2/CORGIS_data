@@ -65,7 +65,7 @@ def get_year_options():
     for skyscraper in skyscrapers:
         year = skyscraper["status"]["completed"]["year"]
         if year > 0:
-            years.append((str)year)
+            years.append(str(year))
     years.sort()
     options = ""
     for s in years:
@@ -91,4 +91,4 @@ def get_tallest(year):
         count = count + 1
     return tallest + " with a height of " + tallestHeight
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
