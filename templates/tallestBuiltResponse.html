@@ -5,8 +5,9 @@
 {% block title %}tallestBuilt{% endblock %}
 
 {% block content %}
+<br>
 <h1>Tallest Building Completed Each Year</h1>
-<br><br>
+<br>
 <form action="/tallestBuiltResponse">
   <label for="year">Choose a year:</label>
   <select name="year" id="year">
@@ -16,18 +17,4 @@
   <input type = "submit" value = "submit" onchange="this.form.submit();">
 </form>
 <p>{{tallest}}</p>
-</body>
 {% endblock %}
-
-    <br><br>
-    <form action="/tallestBuiltResponse">
-      <label for="year">Choose a year:</label>
-      <select name="year" id="year">
-        {{options}}
-      </select>
-      <br><br>
-      <input type = "submit" value = "submit" onchange="this.form.submit();">
-    </form>
-    <p>{{tallest}}</p>
-    </body>
-</html>
