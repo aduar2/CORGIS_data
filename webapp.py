@@ -65,7 +65,7 @@ def get_year_options():
     for skyscraper in skyscrapers:
         year = skyscraper["status"]["completed"]["year"]
         if year > 0:
-            if years.count(year) == 0:
+            if years.count(str(year)) == 0:
                 years.append(str(year))
     years.sort()
     options = ""
