@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def about():
-    return render_template('about.html')
+    return render_template('about.html', yearRange = find_years_range(), average = find_average_completion())
 
 @app.route("/tallestBuilt")
 def tallHome():
