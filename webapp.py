@@ -90,3 +90,5 @@ def get_tallest(year):
             tallest = allBuiltHeights[count]
         count = count + 1
     return tallest + " with a height of " + tallestHeight
+if __name__=="__main__":
+    app.run(debug=False)
