@@ -51,7 +51,7 @@ def find_average_completion():
         started = skyscraper["status"]["started"]["year"]
         if not started == 0 or not completed == 0:
             time = completed - started
-        completionTime.append(time)
+            completionTime.append(time)
     for x in completionTime:
         average = average + x
         x = x + 1
