@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def about():
-    return render_template('about.html', yearRange = find_years_range(), average = find_average_completion())
+    return render_template('about.html', yearsRange = find_years_range(), average = find_average_completion())
 
 @app.route("/tallestBuilt")
 def tallHome():
@@ -90,6 +90,6 @@ def get_tallest(year):
             tallestHeight = str(x)
             tallest = allBuiltHeights[count]
         count = count + 1
-    return tallest + " with a height of " + tallestHeight
+    return "The tallest building constructed that year was " tallest + " with a height of " + tallestHeight
 if __name__=="__main__":
     app.run(debug=True)
