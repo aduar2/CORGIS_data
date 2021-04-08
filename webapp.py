@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def about():
-    return render_template('about.html', yearsRange = find_years_range(), average = find_average_completion())
+    return render_template('about.html', average = find_average_completion())
 
 @app.route("/tallestBuilt")
 def tallHome():
@@ -16,28 +16,6 @@ def tallHome():
 def tallResponse():
     year = request.args['year']
     return render_template('tallestBuiltResponse.html', options = get_year_options(), tallest = get_tallest(year))
-    
-def find_years_range():
-    firstYear = 2021
-    lastYear = 0
-    average = find_average_completion()
-    with open('skyscrapers.json') as skyscraper_data:
-        skyscrapers = json.load(skyscraper_data)
-    for skyscraper in skyscrapers:
-        year = skyscraper["status"]["completed"]["year"]
-        backUp = skyscraper["status"]["started"]["year"]
-        if year > 0:
-            if year < firstYear:
-                firstYear = year
-            if year > lastYear:
-                lastYear = year
-        else:
-            if backUp > 0:
-                if backUp + average < firstYear:
-                    firstYear = backUp + average
-                if backUp + average > lastyear:
-                    lastYear = backUp + average
-        return "contains data on buildings built from " + str(firstYear) + " to " + str(lastYear)
     
 def find_average_completion():
     completionTime = []
