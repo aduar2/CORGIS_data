@@ -15,7 +15,7 @@ def tallHome():
 @app.route("/tallestBuiltResponse")
 def tallResponse():
     year = request.args['year']
-    return render_template('tallestBuiltResponse.html', options = get_year_options(), response = get_tallest(year))
+    return render_template('tallestBuiltResponse.html', options = get_year_options(), tallest = get_tallest(year))
     
 def find_years_range():
     firstYear = 2021
