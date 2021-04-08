@@ -37,7 +37,7 @@ def find_years_range():
                     firstYear = backUp + average
                 if backUp + average > lastyear:
                     lastYear = backUp + average
-        return "contains data on buildings built from " + firstYear + " to " + lastYear
+        return "contains data on buildings built from " + str(firstYear) + " to " + str(lastYear)
     
 def find_average_completion():
     completionTime = []
