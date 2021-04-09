@@ -7,12 +7,35 @@
 {% block content %}
     <h1>About the Skyscraper Data</h1>
 
-    <p>The data used in this web app is from CORGIS Dataset Collection. </p>
+<p>The data used in this web app is from CORGIS Dataset Project and can be found <a href="https://think.cs.vt.edu/corgis/json/skyscrapers/">here</a>.
+    The data contains records statistics about tall buildings around the globe that were constructed from 1895 to 2020, with some gaps.
+    
+    {{yearsRange}} the Council of Tall Buildings and Urban Habitat, which can be found 
+    <a href="http://www.skyscrapercenter.com/">here</a>.
+</p>
     
     <p>One of the statistics reported is the tallest building constructed each year. This is reported by finding which years this set contains data from and then
   finding the buildings whose contruction was completed that year. Then, the building's heights are compared and . These were all done with individual methods. 
     
     </p>
+
+
+The data used in this web app is from the CORGIS Dataset Project and can be found here. 
+The data contain statistics about Broadway shows from August of 1990 to August of 2016. 
+Because the data for part of 1990 and part of 2016 are missing, this website does not offer statistics on those years. 
+The statistics on each show are recorded for each week, so examining statistics for individual days is not possible with this data set.
+
+One of the statistics reported for each show each week is gross potential. 
+The gross potential of a show for a week is the percent of the maximum possible earnings that was actually earned. 
+For example, if a show could have earned $100,000 based on ticket prices, theatre capacity, and the number of performances, but it 
+actually earned $80,000, then its gross potential for that week would be 80%. 
+When it was not possible to calculate the gross potential, it was recorded as 0. 
+Gross potential can be greater than 100% when theatres sell extra standing room tickets or when they use dynamic ticket pricing. 
+The gross potential is calculated based on original ticket prices. (Source)
+
+Some shows are listed multiple times on the Data by Show page (for example, Cats and Cats 2016). 
+This indicates that the show ran for a period of time and then stopped. 
+It was then revived in the year indicated by the number following its name. A revival production may continue for more than a year.
 
 {{yearsRange}}
 {{average}}
