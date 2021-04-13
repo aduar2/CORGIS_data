@@ -73,22 +73,7 @@ def get_tallest(year):
             tallestHeight = x
             tallest = allBuiltHeights[count]
         count = count + 1
-    return "The tallest building constructed that year was " + tallest + " with a height of " + str(tallestHeight)
-
-def make_histogram():
-    with open ('skyscrapers.json') as skyscraper_data:
-        skyscrapers = json.load(skyscraper_data)
-    years = []
-    for x in skyscrapers:
-        if x["status"]["completed"]["year"] > 0:
-            years.append(x["status"]["completed"]["year"])
-    plt.hist(x)
-    plt.show()
-    
-    plt.savefig(sys.stdout.buffer)
-    sys.stdout.flush()
-
-    return years
+    return allBuilt + "The tallest building constructed that year was " + tallest + allBuiltHeights + " with a height of " + str(tallestHeight)
     
 if __name__=="__main__":
     app.run(debug=False)
