@@ -3686,7 +3686,7 @@
   },
   {
     "id": 708,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "900 North Michigan Avenue",
     "location": {
       "city": "Chicago",
@@ -5116,7 +5116,7 @@
   },
   {
     "id": 917,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Bloomberg Tower",
     "location": {
       "city": "New York City",
@@ -5611,7 +5611,7 @@
   },
   {
     "id": 1077,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Duke Energy Center",
     "location": {
       "city": "Charlotte",
@@ -7151,7 +7151,7 @@
   },
   {
     "id": 1124,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Time Warner Center North Tower",
     "location": {
       "city": "New York City",
@@ -7206,7 +7206,7 @@
   },
   {
     "id": 1125,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Time Warner Center South Tower",
     "location": {
       "city": "New York City",
@@ -16611,7 +16611,7 @@
   },
   {
     "id": 2010,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Olympic Tower",
     "location": {
       "city": "New York City",
@@ -18041,7 +18041,7 @@
   },
   {
     "id": 2177,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Cosmopolitan Casino Spa Tower",
     "location": {
       "city": "Las Vegas",
@@ -18096,7 +18096,7 @@
   },
   {
     "id": 2178,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Cosmopolitan Casino Beach Club Tower",
     "location": {
       "city": "Las Vegas",
@@ -21726,7 +21726,7 @@
   },
   {
     "id": 2488,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "520 Madison Avenue",
     "location": {
       "city": "New York City",
@@ -42626,7 +42626,7 @@
   },
   {
     "id": 9895,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "855 6th Avenue",
     "location": {
       "city": "New York City",
@@ -44716,7 +44716,7 @@
   },
   {
     "id": 9861,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "American Furniture Mart",
     "location": {
       "city": "Chicago",
@@ -52966,7 +52966,7 @@
   },
   {
     "id": 15747,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "McCormick Place Marriott Marquis",
     "location": {
       "city": "Chicago",
@@ -55716,7 +55716,7 @@
   },
   {
     "id": 17674,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Block 37 Tower",
     "location": {
       "city": "Chicago",
@@ -77551,7 +77551,7 @@
   },
   {
     "id": 18119,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Hilton Cleveland",
     "location": {
       "city": "Cleveland",
@@ -83106,7 +83106,7 @@
   },
   {
     "id": 16857,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Hotel Inter-Continental Miami",
     "location": {
       "city": "Miami",
@@ -85141,7 +85141,7 @@
   },
   {
     "id": 20671,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Sheraton Phoenix Downtown",
     "location": {
       "city": "Phoenix",
@@ -85416,7 +85416,7 @@
   },
   {
     "id": 20672,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Bank of America Tower",
     "location": {
       "city": "Phoenix",
@@ -95206,7 +95206,7 @@
   },
   {
     "id": 15674,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "35XV Residences",
     "location": {
       "city": "New York City",
@@ -102906,7 +102906,7 @@
   },
   {
     "id": 15898,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "8th and Main Tower",
     "location": {
       "city": "Boise",
@@ -107416,7 +107416,7 @@
   },
   {
     "id": 10568,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "55 Public Square",
     "location": {
       "city": "Cleveland",
@@ -113301,7 +113301,7 @@
   },
   {
     "id": 18355,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "The Sovereign",
     "location": {
       "city": "Houston",
@@ -127986,7 +127986,7 @@
   },
   {
     "id": 15026,
-    "material": "concrete/steel",
+    "material": "steel/concrete",
     "name": "Reva and David Logan Center for Arts",
     "location": {
       "city": "Chicago",
