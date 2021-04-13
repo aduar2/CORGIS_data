@@ -17,9 +17,14 @@ def tallResponse():
     year = request.args['year']
     return render_template('tallestBuiltResponse.html', options = get_year_options(), tallest = get_tallest(year))
 
-@app.route("/builtEachYear")
-def graph():
-    return render_template('histogram.html', histogram = make_histogram())
+@app.route("/graphs")
+def graphHome():
+    graph = request.args['graph']
+    return render_template(graph.html)
+
+@app.route("/getGraph")
+def graphResponse():
+    return render_template()
     
     
 def find_average_completion():
