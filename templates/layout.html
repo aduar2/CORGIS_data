@@ -10,7 +10,7 @@
 
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
   <title>{% block title %}{% endblock %}</title>
-  
+  {% block head %}{% endblock %}
   </head>
   <body>
     <nav class="navbar navbar-expand-md bg-dark navbar-dark">
