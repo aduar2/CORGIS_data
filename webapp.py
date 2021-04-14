@@ -17,7 +17,7 @@ def tallResponse():
     year = request.args['year']
     return render_template('tallestBuiltResponse.html', options = get_year_options(), tallest = get_tallest(year))
 
-@app.route("/graphs")
+@app.route("/graphHome")
 def graphHome():
     return render_template(graphHome.html)
 
