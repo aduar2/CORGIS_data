@@ -19,12 +19,12 @@ def tallResponse():
 
 @app.route("/graphHome")
 def graphHome():
-    return render_template(graphHome.html)
+    return render_template('graphHome.html')
 
 @app.route("/getGraph")
 def graphResponse():
     graph = request.args['graph']
-    return render_template(graphResponse.html, x = graph)
+    return render_template('graphResponse.html', x = graph)
     
     
 def find_average_completion():
