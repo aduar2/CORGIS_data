@@ -24,7 +24,8 @@ def graphHome():
 @app.route("/getGraph")
 def graphResponse():
     graph = request.args['graph']
-    return render_template('graphResponse.html', x = graph)
+    page = graph + ".html"
+    return render_template(page)
     
     
 def find_average_completion():
