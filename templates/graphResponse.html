@@ -11,19 +11,14 @@
 <form action="/graphResponse">
   <label for="graph">Choose a graph:</label>
   <select name="graph" id="graph">
-    [Total Height Per Year, Number of Buildings Completed Each Year]
-    
+    <option value="histogram">Total Height Built per Year</option>
+    <option value="lineGraph">Number of Tall Buildings Completed Each Year</option>
+    <option value="pieChart">Materials Used to Construct Tall Buildings</option>
   </select>
   <br><br>
   <input type = "submit" value = "submit" onchange="this.form.submit();">
 </form>
 
 
-
-if {{x}} == histogram
-
-elif {{x}} == line
-
-elif {{x}} == pie
 
 {% endblock %}
