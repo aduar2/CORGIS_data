@@ -36,7 +36,7 @@ function addData(data) {
 
 }
 
-$.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", addData);
+$.getJSON("skyscrapers.json", addData);
 
 }
 </script>
@@ -47,7 +47,7 @@ $.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", 
 <br>
 <h1>Graphs</h1>
 <br>
-<form action="/graphResponse">
+<form action="/getGraph">
   <label for="graph">Choose a graph:</label>
   <select name="graph" id="graph">
     <option value="histogram">Total Height Built per Year</option>
@@ -63,45 +63,3 @@ $.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", 
 <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
 
 {% endblock %}
-
-
-
-
-window.onload = function() {
-
-var dataPoints = [];
-
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-	theme: "light2",
-	title: {
-		text: "Daily Sales Data"
-	},
-	axisY: {
-		title: "Units",
-		titleFontSize: 24,
-		includeZero: true
-	},
-	data: [{
-		type: "column",
-		yValueFormatString: "#,### Units",
-		dataPoints: dataPoints
-	}]
-});
-
-function addData(data) {
-	for (var i = 0; i < data.length; i++) {
-		dataPoints.push({
-			x: new Date(data[i].date),
-			y: data[i].units
-		});
-	}
-	chart.render();
-
-}
-
-$.getJSON("https://canvasjs.com/data/gallery/javascript/daily-sales-data.json", addData);
-
-}
-</script>
-</head>
