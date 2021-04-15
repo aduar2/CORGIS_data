@@ -24,7 +24,7 @@ def graphHome():
 @app.route("/getGraph")
 def graphResponse():
     graph = request.args['graph']
-    page = "'" + graph + ".html" + "'"
+    page = graph + ".html"
     return render_template(page)
     
     
