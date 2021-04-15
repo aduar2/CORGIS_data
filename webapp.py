@@ -106,7 +106,7 @@ def find_percents():
             s = s + 1
         if mat == "masonry":
             m = m + 1
-        if mat = "steel/concrete":
+        if mat == "steel/concrete":
             sc = sc + 1
         if mat == "composite":
             com = com + 1
