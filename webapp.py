@@ -68,7 +68,7 @@ def get_tallest(year):
     allBuilt = []
     allBuiltHeights = []
     for skyscraper in skyscrapers:
-        if skyscraper["status"]["completed"]["year"] == year:
+        if skyscraper["status"]["completed"]["year"] == int(year):
             allBuilt.append(skyscraper["name"])
             allBuiltHeights.append(skyscraper["statistics"]["height"])
     tallest = ""
@@ -79,7 +79,7 @@ def get_tallest(year):
             tallestHeight = x
             tallest = allBuiltHeights[count]
         count = count + 1
-    return allBuilt + "The tallest building constructed that year was " + tallest + allBuiltHeights + " with a height of " + str(tallestHeight)
+    return allBuilt[0] + "The tallest building constructed that year was " + tallest + allBuiltHeights[0] + " with a height of " + str(tallestHeight)
     
 if __name__=="__main__":
     app.run(debug=False)
