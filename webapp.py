@@ -67,19 +67,23 @@ def get_tallest(year):
         skyscrapers = json.load(skyscraper_data)
     allBuilt = []
     allBuiltHeights = []
+    cities = []
     for skyscraper in skyscrapers:
         if skyscraper["status"]["completed"]["year"] == int(year):
             allBuilt.append(skyscraper["name"])
             allBuiltHeights.append(skyscraper["statistics"]["height"])
+            cities.append(skyscraper["location"]["city"])
     tallest = ""
     tallestHeight = 0
-    count = 0      
+    city = ""
+    count = 0
     for x in allBuiltHeights:
         if x > tallestHeight:
             tallestHeight = x
             tallest = allBuilt[count]
+            city = cities[count]
         count = count + 1
-    return "The tallest building constructed that year was " + tallest + " with a height of " + str(tallestHeight) + "m"
+    return "The tallest building constructed that year was " + tallest + " in " + city + " with a height of " + str(tallestHeight) + "m"
     
 if __name__=="__main__":
     app.run(debug=False)
