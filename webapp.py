@@ -83,7 +83,7 @@ def get_tallest(year):
             tallest = allBuilt[count]
             city = cities[count]
         count = count + 1
-    return "The tallest building constructed that year was " + tallest + " in " + city + " with a height of " + str(tallestHeight) + "m"
+    return "The tallest building constructed in " + year + " was " + tallest + " in " + city + " with a height of " + str(tallestHeight) + "m"
     
 if __name__=="__main__":
     app.run(debug=False)
