@@ -77,9 +77,9 @@ def get_tallest(year):
     for x in allBuiltHeights:
         if x > tallestHeight:
             tallestHeight = x
-            tallest = allBuiltHeights[count]
+            tallest = allBuilt[count]
         count = count + 1
-    return "The tallest building constructed that year was " + str(tallest) + " with a height of " + str(tallestHeight)
+    return "The tallest building constructed that year was " + tallest + " with a height of " + str(tallestHeight)
     
 if __name__=="__main__":
     app.run(debug=False)
