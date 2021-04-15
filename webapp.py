@@ -99,17 +99,18 @@ def find_percents():
     com = 0
     sc = 0
     for x in skyscrapers:
-        mat = skyscraper["material"]
-        if mat == "concrete":
-            con = con + 1
-        if mat == "steel":
-            s = s + 1
-        if mat == "masonry":
-            m = m + 1
-        if mat == "steel/concrete":
-            sc = sc + 1
-        if mat == "composite":
-            com = com + 1
+        for skyscraper in skyscrapers:
+            mat = skyscraper["material"]
+            if mat == "concrete":
+                con = con + 1
+            if mat == "steel":
+                s = s + 1
+            if mat == "masonry":
+                m = m + 1
+            if mat == "steel/concrete":
+                sc = sc + 1
+            if mat == "composite":
+                com = com + 1
     total = con + m + s + com + sc
     percentCon = con/total
     percentM = m/total
