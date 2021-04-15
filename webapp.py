@@ -30,7 +30,7 @@ def graphResponse():
         s = percents[1]
         com = percents[2]
         m = percents[3]
-        sc percents[4]
+        sc = percents[4]
         return render_template('pieChart.html', concrete = con, steel = s, composite = com, masonry = m, steelConcrete = sc)
 
 def find_average_completion():
