@@ -24,10 +24,15 @@ def graphHome():
 @app.route("/getGraph")
 def graphResponse():
     graph = request.args['graph']
-    page = graph + ".html"
-    return render_template(page)
-    
-    
+    if graph == "pieChart":
+        percents = find_percents()
+        con = percents[0]
+        s = percents[1]
+        com = percents[2]
+        m = percents[3]
+        sc percents[4]
+        return render_template('pieChart.html', concrete = con, steel = s, composite = com, masonry = m, steelConcrete = sc)
+
 def find_average_completion():
     completionTime = []
     with open('skyscrapers.json') as skyscraper_data:
@@ -84,6 +89,37 @@ def get_tallest(year):
             city = cities[count]
         count = count + 1
     return "The tallest building constructed in " + year + " was " + tallest + " in " + city + " with a height of " + str(tallestHeight) + "m"
+
+def find_percents():
+    with open('skyscrapers.json') as skyscraper_data:
+        skyscrapers = json.load(skyscraper_data) # do i need to do that every time or am i just being silly? lol
+    con = 0
+    s = 0
+    m = 0
+    com = 0
+    sc = 0
+    for x in skyscrapers:
+        mat = skyscraper["material"]
+        if mat == "concrete":
+            con = con + 1
+        if mat == "steel":
+            s = s + 1
+        if mat == "masonry":
+            m = m + 1
+        if mat = "steel/concrete":
+            sc = sc + 1
+        if mat == "composite":
+            com = com + 1
+    total = con + m + s + com + sc
+    percentCon = con/total
+    percentM = m/total
+    percentS = s/total
+    percentSC = sc/total
+    percentCom = com/total
+    
+    percents = [con, s, com, m, sc]
+    return percents
+
     
 if __name__=="__main__":
     app.run(debug=False)
