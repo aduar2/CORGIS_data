@@ -118,7 +118,7 @@ def find_percents():
     percentSC = sc/total
     percentCom = com/total
     
-    percents = [percentCon, percentS, percentCom, percentM, percentSC]
+    percents = [percentCon * 100, percentS * 100, percentCom * 100, percentM * 100, percentSC * 100]
     return percents
 
     
