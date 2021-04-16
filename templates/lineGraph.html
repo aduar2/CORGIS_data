@@ -11,16 +11,13 @@ window.onload = function () {
 var chart = new CanvasJS.Chart("chartContainer", {
 	animationEnabled: true,  
 	title:{
-		text: "# Buildings Completed Each Year"
+		text: "Number of Buildings Completed Each Year"
 	},
 	axisY: {
 		title: "Construction Completed",
 		valueFormatString: "#0,,.",
-		suffix: "mn",
-		stripLines: [{
-			value: 3366500,
-			label: "Average"
-		}]
+		suffix: " buildings",
+		
 	},
 	data: [{
 		yValueFormatString: "#,### Units",
