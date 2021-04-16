@@ -121,6 +121,23 @@ def find_percents():
     percents = [percentCon * 100, percentS * 100, percentCom * 100, percentM * 100, percentSC * 100]
     return percents
 
-    
+def get_line_data():
+    # find number of buildings each year
+    with open('skyscrapers.json') as skyscraper_data:
+        skyscrapers = json.load(skyscraper_data)
+    years = []
+    for skyscraper in skyscrapers:
+        year = skyscraper["completed"]["year"]
+        if year > 0:
+            years.append(year)
+        years
+        
+    dataPoints = []
+    for year in years:
+        if years.count(year) > 0
+            count = years.count(year)
+            dataPoints.append(year + ", " + count)
+    return dataPoints
+
 if __name__=="__main__":
     app.run(debug=False)
