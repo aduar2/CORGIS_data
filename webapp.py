@@ -138,7 +138,7 @@ def get_line_data():
     for year in years:
         if years.count(year) > 0:
             count = years.count(year)
-            if dataPoint.count(year) == 0:                
+            if dataPoints.count(year) == 0:                
                 dataPoints.append("{x: new Date(" + year + ", 0), y: " + count + "}")
     return dataPoints
 
