@@ -1,3 +1,74 @@
+{% extends "layout.html" %}
+
+{% set active_page = "graphs" %}
+
+{% block title %}getGraph{% endblock %}
+
+{% block head %}
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,  
+    title:{
+        text: "Number of Buildings Completed Each Year"
+    },
+    axisY: {
+        title: "Construction Completed",
+        valueFormatString: "#0,,.",
+        suffix: " buildings",
+    },
+    data: [{
+		yValueFormatString: "#,### Units",
+		xValueFormatString: "YYYY",
+		type: "spline",
+		dataPoints: [
+
+	axisX:{
+		valueFormatString: "DD MMM"
+	},
+	axisY: {
+		title: "Number of Visitors",
+		scaleBreaks: {
+			autoCalculate: true
+		}
+	},
+	data: [{
+		type: "line",
+		xValueFormatString: "DD MMM",
+		color: "#F08080",
+		dataPoints: [
+			{{points[0]}},
+			{{points[1]}},
+			{{points[2]}},
+			{{points[3]}},
+			{{points[4]}},
+			{{points[5]}},
+			{{points[6]}},
+			{{points[7]}},
+            {{points[8]}},
+			{{points[9]}},
+			{{points[10]}},
+			{{points[11]}},
+			{{points[12]}},
+			{{points[13]}},
+			{{points[14]}},
+			{{points[15]}}
+		]
+	}]
+});
+chart.render();
+	
+}
+</script>
+
+{% endblock %}
+
+
+
+
+
+
 <script>
 window.onload = function () {
 
@@ -58,3 +129,30 @@ chart.render();
 
 }
 </script>
+
+
+
+
+{% block content %}
+<br>
+<p> you are on the line graph page </p>
+{{points[0]}}
+{{points[1]}}
+{{points}}
+<h1>Graphs</h1>
+<br>
+<form action="/getGraph">
+  <label for="graph">Choose a graph:</label>
+  <select name="graph" id="graph">
+    <option value="histogram">Total Height Built per Year</option>
+    <option value="lineGraph">Number of Tall Buildings Completed Each Year</option>
+    <option value="pieChart">Materials Used to Construct Tall Buildings</option>
+  </select>
+  <br><br>
+  <input type = "submit" value = "submit" onchange="this.form.submit();">
+</form>
+
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+{% endblock %}
