@@ -133,12 +133,13 @@ def get_line_data():
         year = skyscraper["completed"]["year"]
         if year > 0:
             years.append(year)
-        
+    years.sort()
     dataPoints = []
     for year in years:
         if years.count(year) > 0:
             count = years.count(year)
-            dataPoints.append("{x: new Date(" + year + ", 0), y: " + count + "}")
+            if dataPoint.count(year) == 0:                
+                dataPoints.append("{x: new Date(" + year + ", 0), y: " + count + "}")
     return dataPoints
 
 if __name__=="__main__":
