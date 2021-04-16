@@ -139,7 +139,7 @@ def get_line_data():
         if years.count(year) > 0:
             count = years.count(year)
             if dataPoints.count(year) == 0:                
-                dataPoints.append("{x: new Date(" + year + ", 0), y: " + count + "}")
+                dataPoints.append("{x: new Date(" + str(year) + ", 0), y: " + str(count) + "}")
     return dataPoints
 
 if __name__=="__main__":
