@@ -32,6 +32,9 @@ def graphResponse():
         m = percents[3]
         sc = percents[4]
         return render_template('pieChart.html', concrete = con, steel = s, composite = com, masonry = m, steelConcrete = sc)
+    if graph == "lineGraph":
+        return render_template('lineGraph.html', points = get_line_data)
+
 
 def find_average_completion():
     completionTime = []
