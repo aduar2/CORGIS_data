@@ -130,7 +130,7 @@ def get_line_data():
         skyscrapers = json.load(skyscraper_data)
     years = []
     for skyscraper in skyscrapers:
-        year = skyscraper["completed"]["year"]
+        year = skyscraper["status"]["completed"]["year"]
         if year > 0:
             years.append(year)
     years.sort()
