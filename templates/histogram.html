@@ -28,13 +28,14 @@ var chart = new CanvasJS.Chart("chartContainer", {
 function addData(data) {
 	for (var i = 0; i < data.length; i++) {
 		dataPoints.push({
-			x: new Date(data[i].date),
-			y: data[i].units
+			x: new Date(data[i].status["completed"]["year"]),
+			y: data[i].statistics["height"]
 		});
 	}
 	chart.render();
 
 }
+
 
 $.getJSON("skyscrapers.json", addData);
 
