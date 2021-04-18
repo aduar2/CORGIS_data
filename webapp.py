@@ -35,7 +35,7 @@ def graphResponse():
     if graph == "lineGraph":
         return render_template('lineGraph.html', points = get_line_data())
     if graph == "histogram":
-        return render_template('histogram.html', heights = get_total_heights())
+        return render_template('histogram.html')
 
 
 def find_average_completion():
@@ -147,9 +147,12 @@ def get_line_data():
 def get_hist_data():
     with open('skyscrapers.json') as skyscraper_data:
         skyscrapers = json.load(skyscraper_data)
+    totalHeights = []
     for skyscraper in skyscrapers:
-        if skyscraper
-    return 
+        height = skyscraper["statistics"][:"height"]
+        if skyscraper["status"]["completed"]["year"] > 0:
+            totalHeights.append(height)   
+    return totalHeights
 
 if __name__=="__main__":
     app.run(debug=False)
