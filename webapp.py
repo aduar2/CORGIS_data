@@ -34,6 +34,8 @@ def graphResponse():
         return render_template('pieChart.html', concrete = con, steel = s, composite = com, masonry = m, steelConcrete = sc)
     if graph == "lineGraph":
         return render_template('lineGraph.html', points = get_line_data())
+    if graph == "histogram":
+        return render_template('histogram.html', heights = get_total_heights())
 
 
 def find_average_completion():
@@ -141,6 +143,13 @@ def get_line_data():
             if dataPoints.count(year) == 0:                
                 dataPoints.append("{x: new Date(" + str(year) + ", 0), y: " + str(count) + "}")
     return dataPoints
+
+def get_hist_data():
+    with open('skyscrapers.json') as skyscraper_data:
+        skyscrapers = json.load(skyscraper_data)
+    for skyscraper in skyscrapers:
+        if skyscraper
+    return 
 
 if __name__=="__main__":
     app.run(debug=False)
