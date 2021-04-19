@@ -147,12 +147,18 @@ def get_line_data():
 def get_hist_data():
     with open('skyscrapers.json') as skyscraper_data:
         skyscrapers = json.load(skyscraper_data)
-    totalHeights = []
+    data = []
     for skyscraper in skyscrapers:
-        height = skyscraper["statistics"][:"height"]
-        if skyscraper["status"]["completed"]["year"] > 0:
-            totalHeights.append(height)   
-    return totalHeights
+        year = skyscraper["status"]["completed"]["year"]
+        height = skyscraper["statistics"]["height"]
+        if year > 0 and height > 0:
+            if data.count(year) == 0:
+                data.append(year)
+                data.append(height)
+            else:
+                data[data.index(year) + 1] = data[data.index(year) + 1] + height
+    return data
+        
 
 if __name__=="__main__":
     app.run(debug=False)
