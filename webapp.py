@@ -35,7 +35,7 @@ def graphResponse():
     if graph == "lineGraph":
         return render_template('lineGraph.html', points = get_line_data())
     if graph == "histogram":
-        return render_template('histogram.html')
+        return render_template('histogram.html', data = get_hist_data())
 
 
 def find_average_completion():
